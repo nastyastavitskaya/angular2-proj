@@ -1,0 +1,7 @@
+nav { font-size: 20px; }
+
+.active {
+  cursor: default;
+  color: #404040;
+  text-decoration: none;
+}

@@ -3,4 +3,9 @@
 </h1>
 
 <app-header></app-header>
+<nav class="nav">
+  <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+  <a routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Products</a>
+  <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About</a>
+</nav>
 <router-outlet></router-outlet>
