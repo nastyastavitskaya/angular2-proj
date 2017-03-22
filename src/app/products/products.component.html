@@ -16,10 +16,10 @@
               <p class="lead">
                 ${{product.price}}
               </p>
-              <p class="lead" *ngIf="product.quantity == '0'">
+              <p class="lead" *ngIf="!product.quantity">
                 Out of stock
               </p>
-              <p class="lead" *ngIf="product.quantity > '0'">
+              <p class="lead" *ngIf="product.quantity">
                 In stock: {{product.quantity}}
               </p>
             </div>
