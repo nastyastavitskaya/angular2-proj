@@ -4,35 +4,35 @@
       "id": 1,
       "name": "HOURGLASS Powder",
       "description": "A collection of six universally-flattering finishing powders that recreate the most flattering light. ",
-      "price": "$22.50",
+      "price": "22.50",
       "image": "http://placehold.it/150/dff9f6"
     },
     {
       "id": 2,
       "name": "NARS Blush Duo",
       "description": "A limited-edition blush duo that delivers a healthy-looking, bronzed glow and a radiant flush of blush.",
-      "price": "$42.00",
+      "price": "42.00",
       "image": "http://placehold.it/150/dff9f6"
     },
     {
       "id": 3,
       "name": "Bite Beauty High Pigment Pencil",
       "description": "A long-lasting, matte lip color.",
-      "price": "$24.00",
+      "price": "24.00",
       "image": "http://placehold.it/150/dff9f6"
     },
     {
       "id": 4,
       "name": "Elizabeth and James Nirvana Black Dry Shampoo",
       "description": "The first fine fragrance dry shampoo that refreshes, volumizes, and texturizes while perfuming hair with the addictive fragrance of Nirvana Black.",
-      "price": "$28.00",
+      "price": "28.00",
       "image": "http://placehold.it/150/dff9f6"
     },
     {
       "id": 5,
       "name": "NARS Velvet Lip Glide",
       "description": "An innovative, long-lasting lip color with a smooth, semi-matte finish that provides ultimate hydration.",
-      "price": "$26.99",
+      "price": "26.99",
       "image": "http://placehold.it/150/dff9f6"
     }
   ]
