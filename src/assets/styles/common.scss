@@ -11,3 +11,11 @@
 .btn-success {
   margin-top: 50px;
 }
+
+.loader {
+  background: url(assets/images/loader.gif) no-repeat center;
+  position: fixed;
+  width: 90%;
+  height: 50%;
+  z-index: 1;
+}
