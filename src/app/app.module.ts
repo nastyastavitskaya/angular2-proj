@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
+import { ProductComponent } from './product/product.component';
 
 import { APP_ROUTES } from './app.routes'
 
@@ -19,7 +20,8 @@ import { APP_ROUTES } from './app.routes'
     HeaderComponent,
     HomeComponent,
     ProductsComponent,
-    AboutComponent
+    AboutComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="loader" *ngIf="pending"></div>
-  <div *ngFor="let product of products" id="products" class="row list-group">
+  <div class="loader" *ngIf="pending" [pending]="pending"></div>
+  <div *ngFor="let product of products" [product]="product" id="products" class="row list-group">
     <div class="item col-xs-4 col-lg-4">
       <div class="thumbnail">
         <img class="group list-group-image" src="{{product.image}}"/>
@@ -34,4 +34,3 @@
     </div>
   </div>
 </div>
-
