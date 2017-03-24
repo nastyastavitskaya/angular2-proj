@@ -19,12 +19,12 @@ export class ProductsComponent implements OnInit {
   ngOnInit() { this.getProducts(); }
 
   getProducts() {
-      this.pending = true;
-      this.productsService.getProducts()
-                          .subscribe(products => {
-                                        this.products = products;
-                                        this.pending = false;
-                                      },
-                                      error => {this.pending = false;})
+    this.pending = true;
+    this.productsService.getProducts()
+                        .subscribe(products => {
+                                      this.products = products;
+                                      this.pending = false;
+                                    },
+                                    error => {this.pending = false;})
   }
 }
