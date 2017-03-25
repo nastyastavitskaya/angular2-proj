@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Your shopping cart</h2>
+
+  <table class="table table-condensed" style="width: 60%">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

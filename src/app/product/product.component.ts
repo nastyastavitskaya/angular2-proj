@@ -9,11 +9,11 @@ import { ShoppingCartService } from 'app/cart.service';
 })
 
 export class ProductComponent {
-  @Input() product: Product[];
+  @Input() product: Product;
 
-  constructor(private cartService: ShoppingCartService) { }
+  constructor(private cartService: ShoppingCartService) {}
 
-  addToCart(product) {
+  addToCart() {
     this.cartService.addProduct(this.product)
   }
 }
