@@ -4,8 +4,7 @@ import { ShoppingCartService } from 'app/cart.service';
 
 @Component({
   selector: 'app-product',
-  templateUrl: './product.component.html',
-  providers: [ShoppingCartService]
+  templateUrl: './product.component.html'
 })
 
 export class ProductComponent {
