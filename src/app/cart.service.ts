@@ -15,10 +15,13 @@ export class ShoppingCartService {
     let p = this.cartProducts.find(cartProduct => cartProduct.product.id === product.id);
 
     if(p) {
-      cartProduct.quantity++;
+      p.quantity++;
+      console.log('already in cart:', cartProduct.product.name, p.quantity);
     }
-    else { this.cartProducts.push(cartProduct) }
-    console.log('added to cart:', cartProduct.product.name, cartProduct.quantity);
+    else {
+      this.cartProducts.push(cartProduct);
+      console.log('added in cart:', cartProduct.product.name, cartProduct.quantity);
+    }
   }
 
   getProducts(){
