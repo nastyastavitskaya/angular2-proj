@@ -14,6 +14,5 @@ export class ProductComponent {
 
   addToCart() {
     this.cartService.addProduct(this.product)
-    console.log('product component:', this.product.name)
   }
 }

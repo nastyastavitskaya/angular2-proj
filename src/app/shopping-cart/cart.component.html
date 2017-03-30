@@ -5,14 +5,15 @@
     <thead>
       <tr>
         <th>Product</th>
+        <th>Quantity</th>
         <th>Price</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let cartProduct of cartProducts">
-        <td>{{cartProduct.name}}</td>
-
-        <td>{{cartProduct.price}}</td>
+        <td>{{cartProduct.product.name}}</td>
+        <td>{{cartProduct.quantity}}</td>
+        <td>${{cartProduct.product.price}}</td>
       </tr>
     </tbody>
   </table>

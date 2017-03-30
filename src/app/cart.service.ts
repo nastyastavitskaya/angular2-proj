@@ -7,18 +7,22 @@ import { CartProduct } from './shopping-cart/cart-product.model';
 export class ShoppingCartService {
   private cartProducts: CartProduct[] = [];
 
-  findProduct(cartProduct) {
-    return cartProduct.id == 1;
-  }
 
-  addProduct(cartProduct){
-    this.cartProducts.push(cartProduct);
-    console.log("in cart:", cartProduct.id, cartProduct.name);
-    console.log('BOOM', this.cartProducts.find(this.findProduct));
+
+  addProduct(product: Product){
+    let cartProduct = new CartProduct(product, 1);
+
+    let p = this.cartProducts.find(cartProduct => cartProduct.product.id === product.id);
+
+    if(p) {
+      cartProduct.quantity++;
+    }
+    else { this.cartProducts.push(cartProduct) }
+    console.log('added to cart:', cartProduct.product.name, cartProduct.quantity);
   }
 
   getProducts(){
-    console.log(this.cartProducts);
+    console.log('in cart:', this.cartProducts);
     return this.cartProducts;
   }
 }
