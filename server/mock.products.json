@@ -2,38 +2,54 @@
   "products": [
     {
       "id": 1,
-      "name": "HOURGLASS Powder",
-      "description": "A collection of six universally-flattering finishing powders that recreate the most flattering light. ",
-      "price": 22.50,
+      "name": "PHILOSOPHY Purity Made Simple",
+      "description": "An award-winning, highly effective one-step facial cleanser to tone and hydrate skin.",
+      "price": 11,
       "image": "http://placehold.it/150/dff9f6",
-      "quantity": 0
+      "quantity": 1
     },
     {
       "id": 2,
       "name": "NARS Blush Duo",
       "description": "A limited-edition blush duo that delivers a healthy-looking, bronzed glow and a radiant flush of blush.",
-      "price": 42.00,
-      "image": "http://placehold.it/150/dff9f6",
-      "quantity": 5
-    },
-    {
-      "id": 3,
-      "name": "Bite Beauty High Pigment Pencil",
-      "description": "A long-lasting, matte lip color.",
-      "price": 24.00,
+      "price": 42.50,
       "image": "http://placehold.it/150/dff9f6",
       "quantity": 0
     },
     {
-      "id": 4,
-      "name": "Elizabeth and James Nirvana Black Dry Shampoo",
-      "description": "The first fine fragrance dry shampoo that refreshes, volumizes, and texturizes while perfuming hair with the addictive fragrance of Nirvana Black.",
-      "price": 28.00,
+      "id": 3,
+      "name": "HOURGLASS Foundation Stick",
+      "description": "A long-wearing foundation stick with the coverage of a concealer, fluidity of a liquid, and weightlessness of a powder for invisible, full coverage.",
+      "price": 46,
       "image": "http://placehold.it/150/dff9f6",
-      "quantity": 10
+      "quantity": 3
+    },
+    {
+      "id": 4,
+      "name": "Stella McCartney POP Rollerball",
+      "description": "Notes: Tomato Leaves, Violet Leaves, And Green Mandarin, Violet, Tuberose, Plumeria, Sandalwood, Cedarwood, Musks.",
+      "price": 25,
+      "image": "http://placehold.it/150/dff9f6",
+      "quantity": 3
     },
     {
       "id": 5,
+      "name": "Givenchy Mister Brow Groom Universal Brow Setter",
+      "description": "A universal transparent gel that shapes brows and holds them in place.",
+      "price": 27,
+      "image": "http://placehold.it/150/dff9f6",
+      "quantity": 8
+    },
+    {
+      "id": 6,
+      "name": "Elizabeth and James Nirvana Black Dry Shampoo",
+      "description": "The first fine fragrance dry shampoo that refreshes, volumizes, and texturizes while perfuming hair with the addictive fragrance of Nirvana Black.",
+      "price": 28.90,
+      "image": "http://placehold.it/150/dff9f6",
+      "quantity": 0
+    },
+    {
+      "id": 7,
       "name": "NARS Velvet Lip Glide",
       "description": "An innovative, long-lasting lip color with a smooth, semi-matte finish that provides ultimate hydration.",
       "price": 26.99,
