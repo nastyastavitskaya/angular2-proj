@@ -7,18 +7,15 @@ import { CartProduct } from './shopping-cart/cart-product.model';
 export class ShoppingCartService {
   private cartProducts: CartProduct[] = [];
 
-
-
   addProduct(product: Product){
-    let cartProduct = new CartProduct(product, 1);
-
-    let p = this.cartProducts.find(cartProduct => cartProduct.product.id === product.id);
+   let p = this.cartProducts.find(cartProduct => cartProduct.product.id === product.id);
 
     if(p) {
       p.quantity++;
-      console.log('already in cart:', cartProduct.product.name, p.quantity);
+      console.log('already in cart:', p.product.name, p.quantity);
     }
     else {
+      let cartProduct = new CartProduct(product, 1);
       this.cartProducts.push(cartProduct);
       console.log('added in cart:', cartProduct.product.name, cartProduct.quantity);
     }
