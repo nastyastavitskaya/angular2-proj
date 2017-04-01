@@ -14,11 +14,11 @@
       <tr *ngFor="let cartProduct of cartProducts">
         <td>{{cartProduct.product.name}}</td>
         <td>{{cartProduct.quantity}}</td>
-        <td>${{cartProduct.product.price}}</td>
-        <td>${{cartProduct.product.price * cartProduct.quantity}}</td>
+        <td>{{cartProduct.product.price | currency:'USD':true}}</td>
+        <td>{{cartProduct.product.price * cartProduct.quantity | currency:'USD':true}}</td>
       </tr>
       <tr>
-        <th colspan="4" style="text-align:right">Total: {{totalPrice}}</th>
+        <th colspan="4" style="text-align:right">Total: {{totalPrice | currency:'USD':true}}</th>
       </tr>
     </tbody>
   </table>
