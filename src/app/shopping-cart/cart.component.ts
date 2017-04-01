@@ -10,10 +10,12 @@ import { CartProduct } from './cart-product.model';
 
 export class ShoppingCartComponent implements OnInit {
   cartProducts = [];
+  totalPrice: number;
 
   constructor(private cartService: ShoppingCartService) {}
 
   ngOnInit() {
     this.cartProducts = this.cartService.getProducts();
+    this.totalPrice = this.cartService.getTotalPrice();
   }
 }

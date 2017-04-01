@@ -25,4 +25,16 @@ export class ShoppingCartService {
     console.log('in cart:', this.cartProducts);
     return this.cartProducts;
   }
+
+  private setTotalPrice(){
+    let totalPrice = this.cartProducts.reduce((sum, cartProduct) => {
+      return sum += cartProduct.product.price * cartProduct.quantity, sum;
+    }, 0);
+    console.log('Total price:', totalPrice);
+    return totalPrice;
+  }
+
+  public getTotalPrice(){
+    return this.setTotalPrice();
+  }
 }
