@@ -6,6 +6,7 @@ import { CartProduct } from './shopping-cart/cart-product.model';
 
 export class ShoppingCartService {
   private cartProducts: CartProduct[] = [];
+  private totalPrice: number;
 
   addProduct(product: Product){
    let p = this.cartProducts.find(cartProduct => cartProduct.product.id === product.id);
@@ -19,6 +20,8 @@ export class ShoppingCartService {
       this.cartProducts.push(cartProduct);
       console.log('added in cart:', cartProduct.product.name, cartProduct.quantity);
     }
+
+    this.setTotalPrice();
   }
 
   getProducts(){
@@ -26,15 +29,14 @@ export class ShoppingCartService {
     return this.cartProducts;
   }
 
-  private setTotalPrice(){
-    let totalPrice = this.cartProducts.reduce((sum, cartProduct) => {
-      return sum += cartProduct.product.price * cartProduct.quantity, sum;
-    }, 0);
-    console.log('Total price:', totalPrice);
-    return totalPrice;
+  getTotalPrice(){
+    return this.totalPrice;
   }
 
-  public getTotalPrice(){
-    return this.setTotalPrice();
+  private setTotalPrice(){
+    this.totalPrice = this.cartProducts.reduce((sum, cartProduct) => {
+      return sum += cartProduct.product.price * cartProduct.quantity, sum;
+    }, 0);
+    console.log('Total price:', this.totalPrice);
   }
 }
