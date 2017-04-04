@@ -8,13 +8,14 @@ import { Popup } from './popup.model';
 })
 export class PopupComponent implements OnInit {
   popupList: Popup[] = [];
-  myPopup = new Popup({text: ""});
+
 
   constructor() { }
 
   ngOnInit() { }
 
-  doShow(myPopup) {
+  doShow(popupParams) {
+    let myPopup = new Popup(popupParams);
     this.popupList.push(myPopup);
   }
 }

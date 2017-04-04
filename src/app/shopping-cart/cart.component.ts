@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ShoppingCartService } from 'app/cart.service';
 import { CartProduct } from './cart-product.model';
 import { PopupComponent } from 'app/popup/popup.component';
-import { Popup } from 'app/popup/popup.model';
 
 @Component({
   selector: 'app-cart',
@@ -14,7 +13,6 @@ export class ShoppingCartComponent implements OnInit {
   totalPrice: number;
 
   @ViewChild(PopupComponent) popupComponent: PopupComponent
-  checkoutPopup = new Popup({type: "warning", text: "This functionality is not implemented..."});
 
   constructor(private cartService: ShoppingCartService) {}
 
@@ -24,6 +22,6 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   showCheckoutPopup(){
-    this.popupComponent.doShow(this.checkoutPopup);
+    this.popupComponent.doShow({type: "warning", text: "This functionality is not implemented..."});
   }
 }
