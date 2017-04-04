@@ -1,0 +1,5 @@
+<div *ngFor="let popup of popupList">
+  <alert [type]="popup.type" [dismissOnTimeout]="popup.dismissible" [dismissible]="popup.delay">
+    {{popup.text}}
+  </alert>
+</div>

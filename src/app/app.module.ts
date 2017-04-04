@@ -12,9 +12,10 @@ import { ProductsComponent } from './products/products.component';
 import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './product/product.component';
 import { ShoppingCartComponent } from './shopping-cart/cart.component';
+import { PopupComponent } from './popup/popup.component';
 
 import { APP_ROUTES } from './app.routes'
-import { ShoppingCartService } from './cart.service'
+import { ShoppingCartService } from './cart.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ShoppingCartService } from './cart.service'
     ProductsComponent,
     AboutComponent,
     ProductComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
