@@ -9,9 +9,9 @@ import { Popup } from './popup/popup.model';
 })
 export class AppComponent {
   @ViewChild(PopupComponent) popupComponent: PopupComponent
-  myPopup = new Popup({text: "App works!"});
+  appPopup = new Popup({text: "App works!"});
 
   ngOnInit() {
-    this.popupComponent.doShow(this.myPopup);
+    this.popupComponent.doShow(this.appPopup);
   }
 }

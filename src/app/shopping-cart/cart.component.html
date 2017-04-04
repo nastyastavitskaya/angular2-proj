@@ -1,6 +1,6 @@
+<app-popup></app-popup>
 <div class="container">
   <h2>Your shopping cart</h2>
-
   <table class="table table-condensed" style="width: 60%">
     <thead>
       <tr>
@@ -19,6 +19,9 @@
       </tr>
       <tr>
         <th colspan="4" style="text-align:right">Total: {{totalPrice | currency:'USD':true}}</th>
+        <div class="btn-group" style="margin-top:25px;">
+        <button type="button" class="btn btn-success" (click)="showCheckoutPopup()">Checkout</button>
+      </div>
       </tr>
     </tbody>
   </table>
