@@ -1,11 +1,16 @@
 export class Popup {
-  public type?: string = 'info';
-  public text: string;
-  public dismissible?: boolean = true;
-  public delay?: number = 2500;
+  type?: string = 'info';
+  text: string;
+  dismissible?: boolean = true;
+  delay?: number = 2500;
 
-  constructor(params: Popup, text: string){
-    Object.assign(this, params);
-    this.text = text;
+  constructor(
+    params: {
+      type?: string,
+      text: string,
+      dismissible?: boolean,
+      delay?: number
+    }){
+    Object.assign(this, params)
   }
 }
