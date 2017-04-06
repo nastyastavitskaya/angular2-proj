@@ -8,21 +8,21 @@ import { Popup } from './popup.model';
 })
 export class PopupComponent implements OnInit {
   popupList: Popup[] = [];
-  private lastId: number;
+  private lastId: number = 1;
 
   constructor() { }
 
   ngOnInit() {}
 
   doShow(popupParams) {
-    let myPopup = new Popup(popupParams);
+    let myPopup = new Popup(popupParams, this.lastId);
+    console.log(myPopup);
     this.popupList.push(myPopup);
     this.lastId++;
-    console.log(this.lastId);
   }
 
   onClosed(popup: Popup){
-    this.popupList.filter(popup => popup.id === this.lastId)
+    this.popupList = this.popupList.filter(closedPopup => closedPopup.id  ===  popup.id);
   }
 }
 

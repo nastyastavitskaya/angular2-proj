@@ -3,9 +3,10 @@ export class Popup {
   text: string;
   dismissible?: boolean = true;
   delay?: number = 2500;
-  id?: number = 1;
+  id: number;
 
-  constructor(params: Popup) {
-    Object.assign(this, params)
+  constructor(params: Popup, id: number) {
+    Object.assign(this, params);
+    this.id = id;
   }
 }
