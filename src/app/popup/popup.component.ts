@@ -1,28 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Popup } from './popup.model';
+import { Component } from '@angular/core';
+import { PopupService } from 'app/popup.service';
 
 @Component({
   selector: 'app-popup',
-  templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.css']
+  templateUrl: './popup.component.html'
 })
-export class PopupComponent implements OnInit {
-  popupList: Popup[] = [];
-  private lastId: number = 1;
+export class PopupComponent {
+  popupList = this.popupService.popupList;
 
-  constructor() { }
-
-  ngOnInit() {}
-
-  doShow(popupParams) {
-    let myPopup = new Popup(popupParams, this.lastId);
-    console.log(myPopup);
-    this.popupList.push(myPopup);
-    this.lastId++;
-  }
-
-  onClosed(popup: Popup){
-    this.popupList = this.popupList.filter(closedPopup => closedPopup.id  ===  popup.id);
-  }
+  constructor(private popupService: PopupService){ }
 }
 

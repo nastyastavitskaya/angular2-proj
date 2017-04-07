@@ -1,5 +1,5 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
-import { PopupComponent } from './popup/popup.component';
+import { Component, OnInit } from '@angular/core';
+import { PopupService } from 'app/popup.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +7,9 @@ import { PopupComponent } from './popup/popup.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild(PopupComponent) popupComponent: PopupComponent
+  constructor(private popupService: PopupService) {}
 
   ngOnInit() {
-    this.popupComponent.doShow({text: "App works!"});
+    this.popupService.doShow({text: "App works!"});
   }
 }
