@@ -15,6 +15,9 @@ export class PopupService {
   }
 
   onClosed(closedPopup: Popup){
-    this.popupList = this.popupList.filter(popup => closedPopup.id  !==  popup.id);
+    let index =  this.popupList.findIndex(popup => closedPopup.id === popup.id);
+    if(index !== -1) {
+      this.popupList.splice(index, 1);
+    }
   }
 }
