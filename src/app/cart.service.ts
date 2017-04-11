@@ -1,5 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Product } from 'app/product.model';
+import { Injectable }  from '@angular/core';
+import { Subject }     from 'rxjs/Subject';
+import { Product }     from 'app/product.model';
 import { CartProduct } from './shopping-cart/cart-product.model';
 
 @Injectable()
@@ -7,6 +8,12 @@ import { CartProduct } from './shopping-cart/cart-product.model';
 export class ShoppingCartService {
   private cartProducts: CartProduct[] = [];
   private totalPrice: number;
+
+  private productsQuantity: number = 1;
+  private productsQuantitySource = new Subject<any>();
+
+  changeProductsQuantity$ = this.productsQuantitySource.asObservable();
+
 
   addProduct(product: Product){
    let p = this.cartProducts.find(cartProduct => cartProduct.product.id === product.id);
@@ -20,8 +27,8 @@ export class ShoppingCartService {
       this.cartProducts.push(cartProduct);
       console.log('added in cart:', cartProduct.product.name, cartProduct.quantity);
     }
-
     this.setTotalPrice();
+    this.productsQuantitySource.next(this.productsQuantity++);
   }
 
   getProducts(){

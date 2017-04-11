@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
+import { ShoppingCartService } from 'app/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  productsQuantity: number;
+  subscription: Subscription;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private shoppingCartService: ShoppingCartService) {
+    this.subscription = this.shoppingCartService.changeProductsQuantity$.subscribe(
+      productQuantity => {this.productsQuantity = productQuantity}
+    );
   }
+
+  ngOnInit() { }
+
+  ngOnDestroy() { this.subscription.unsubscribe(); }
 
 }

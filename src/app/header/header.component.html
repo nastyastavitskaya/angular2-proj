@@ -14,7 +14,9 @@
         <a routerLink="/about">About</a>
       </li>
       <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/cart">Shopping Cart</a>
+        <a routerLink="/cart">Shopping Cart
+          <strong *ngIf="productsQuantity">({{productsQuantity}})</strong>
+        </a>
       </li>
     </ul>
   </div>
