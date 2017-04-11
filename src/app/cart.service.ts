@@ -9,7 +9,7 @@ export class ShoppingCartService {
   private cartProducts: CartProduct[] = [];
   private totalPrice: number;
 
-  private productsQuantity: number = 0;
+  private totalQuantity: number = 0;
   private productsQuantitySource = new Subject<any>();
 
   changeProductsQuantity$ = this.productsQuantitySource.asObservable();
@@ -28,7 +28,7 @@ export class ShoppingCartService {
       console.log('added in cart:', cartProduct.product.name, cartProduct.quantity);
     }
     this.setTotalPrice();
-    this.productsQuantitySource.next(++this.productsQuantity);
+    this.productsQuantitySource.next(++this.totalQuantity);
   }
 
   getProducts(){

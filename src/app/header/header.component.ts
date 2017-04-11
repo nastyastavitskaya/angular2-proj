@@ -8,12 +8,12 @@ import { ShoppingCartService } from 'app/cart.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  productsQuantity: number;
+  totalQuantity: number;
   subscription: Subscription;
 
   constructor(private shoppingCartService: ShoppingCartService) {
     this.subscription = this.shoppingCartService.changeProductsQuantity$.subscribe(
-      productQuantity => {this.productsQuantity = productQuantity}
+      totalQuantity => {this.totalQuantity = totalQuantity}
     );
   }
 
