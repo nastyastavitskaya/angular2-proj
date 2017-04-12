@@ -12,7 +12,11 @@
     <tbody>
       <tr *ngFor="let cartProduct of cartProducts">
         <td>{{cartProduct.product.name}}</td>
-        <td>{{cartProduct.quantity}}</td>
+        <td>
+          <input type="text" class="form-control" id="quantity"
+                 required
+                 [(ngModel)]="cartProduct.quantity" quantity="quantity">
+        </td>
         <td>{{cartProduct.product.price | currency:'USD':true}}</td>
         <td>{{cartProduct.product.price * cartProduct.quantity | currency:'USD':true}}</td>
       </tr>
