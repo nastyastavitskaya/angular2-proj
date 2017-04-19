@@ -7,6 +7,7 @@ export class CartProduct {
   private _quantity: number;
 
   set quantity(_quantity: number) {
+    _quantity = Number(_quantity);
     this._quantitySource.next(_quantity);
     console.log('Quantity changed', _quantity);
   }
