@@ -23,7 +23,6 @@ export class ShoppingCartService {
     else {
       this.addNewCartProduct(product)
     }
-    this.setTotalPrice();
   }
 
   getProducts(){
@@ -45,6 +44,7 @@ export class ShoppingCartService {
     this.totalQuantity = this.cartProducts.reduce((prev, curr: CartProduct) => {
       return prev + curr.quantity;
     }, 0);
+    this.setTotalPrice();
     this.productsQuantitySource.next(this.totalQuantity);
     console.log('Total quantity:', this.totalQuantity);
   }

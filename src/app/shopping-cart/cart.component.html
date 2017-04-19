@@ -15,7 +15,8 @@
         <td>
           <input type="text" class="form-control" id="quantity"
                  required
-                 [(ngModel)]="cartProduct.quantity" quantity="quantity">
+                 [(ngModel)]="cartProduct.quantity" quantity="quantity"
+                 (ngModelChange)="onQuantityChanged()">
         </td>
         <td>{{cartProduct.product.price | currency:'USD':true}}</td>
         <td>{{cartProduct.product.price * cartProduct.quantity | currency:'USD':true}}</td>

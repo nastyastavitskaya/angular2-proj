@@ -22,4 +22,8 @@ export class ShoppingCartComponent implements OnInit {
   showCheckoutPopup(){
     this.popupService.doShow({type: "warning", text: "This functionality is not implemented..."});
   }
+
+  onQuantityChanged(){
+    this.totalPrice = this.cartService.getTotalPrice();
+  }
 }
